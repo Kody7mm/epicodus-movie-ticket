@@ -25,6 +25,14 @@ Ticket.prototype.timeDiscount = function() {
   }
 }
 
+Ticket.prototype.statusDiscount = function() {
+  if (this.movieStatus === "Old") {
+    return -3;
+  } else {
+    return 0;
+  }
+}
+
 // Ticket.prototype.getPrice() = function() {
 //   return 10 + Ticket.ageDiscount() + Ticket.timeDiscount() + Ticket.statusDiscount();
 // }
