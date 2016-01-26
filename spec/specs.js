@@ -6,6 +6,10 @@
      expect(newTicket.age).to.equal('Adult');
      expect(newTicket.price).to.equal();
    });
+   it("adds the getPrice method to all tickets", function() {
+     var testTicket = new Ticket('Superman', 'Morning', 'Adult');
+     expect(testTicket.getPrice()).to.equal(12);
+   });
  });
 
  describe('Movie', function() {
