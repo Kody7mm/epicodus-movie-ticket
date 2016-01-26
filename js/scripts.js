@@ -33,6 +33,6 @@ Ticket.prototype.statusDiscount = function() {
   }
 }
 
-// Ticket.prototype.getPrice() = function() {
-//   return 10 + Ticket.ageDiscount() + Ticket.timeDiscount() + Ticket.statusDiscount();
-// }
+Ticket.prototype.getPrice = function() {
+  return 10 + this.ageDiscount() + this.timeDiscount() + this.statusDiscount();
+}
