@@ -7,5 +7,13 @@
      expect(newTicket.movieStatus).to.equal('New');
      expect(newTicket.price).to.equal();
    });
+   it("adds the ageDiscount method to all tickets", function() {
+     var testTicket = new Ticket('Superman', 'Morning', 'Child', 'New')
+     expect(testTicket.ageDiscount()).to.equal(-2);
+   });
 
+  //  it("adds the getPrice method to all tickets", function() {
+  //    var testTicket = new Ticket('Superman', 'Morning', 'Adult', 'New');
+  //    expect(testTicket.getPrice()).to.equal(12);
+  //  });
  });
