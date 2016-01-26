@@ -36,3 +36,19 @@ Ticket.prototype.statusDiscount = function() {
 Ticket.prototype.getPrice = function() {
   return 10 + this.ageDiscount() + this.timeDiscount() + this.statusDiscount();
 }
+
+$(document).ready(function() {
+  $('form#chooseTicket').submit(function(event) {
+    event.preventDefault();
+
+    var movieTitle = $('select#movieTitle').val();
+    var timeOfDay = $('select#timeOfDay').val();
+    var age = $('select#age').val();
+    var newTicket = new Ticket(movieTitle, timeOfDay, age);
+    var ticketPrice = newTicket.getPrice();
+
+    $('ul#ticketInCart').append('<li>' + movieTitle + ' ' + timeOfDay + ' ' + age + ' $' + ticketPrice + '</li>');
+
+
+  });
+});
