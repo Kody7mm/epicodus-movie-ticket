@@ -14,7 +14,7 @@ Add movie tickets to your cart by selecting a movie, showtime, and your age. The
 
 ## Known Bugs
 
-No known nugs
+No known bugs
 
 ### License
 
