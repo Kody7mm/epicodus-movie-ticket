@@ -13,7 +13,17 @@ Ticket.prototype.ageDiscount = function() {
   } else {
     return 0;
   }
-}  
+}
+
+Ticket.prototype.timeDiscount = function() {
+  if (this.timeOfDay === "Morning") {
+    return -1;
+  } else if (this.timeOfDay === "Evening") {
+    return +1;
+  } else {
+    return 0;
+  }
+}
 
 // Ticket.prototype.getPrice() = function() {
 //   return 10 + Ticket.ageDiscount() + Ticket.timeDiscount() + Ticket.statusDiscount();
