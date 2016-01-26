@@ -38,6 +38,8 @@ Ticket.prototype.getPrice = function() {
 }
 
 $(document).ready(function() {
+  var totalPrice = 0;
+
   $('form#chooseTicket').submit(function(event) {
     event.preventDefault();
 
@@ -46,8 +48,15 @@ $(document).ready(function() {
     var age = $('select#age').val();
     var newTicket = new Ticket(movieTitle, timeOfDay, age);
     var ticketPrice = newTicket.getPrice();
+    var ticketCart = [];
 
-    $('ul#ticketInCart').append('<li>' + movieTitle + ' ' + timeOfDay + ' ' + age + ' $' + ticketPrice + '</li>');
+    ticketCart.push(newTicket);
+
+    ticketCart.forEach(function(ticket) {
+      $('ul#ticketInCart').append('<li>' + ticket.movieTitle + ' ' + ticket.timeOfDay + ' ' + ticket.age + ' $' + ticketPrice + '</li>');
+      return totalPrice += ticketPrice;
+    });
+    $("div#price").text("Total: $" + totalPrice);
 
 
   });
