@@ -11,6 +11,10 @@
      var testTicket = new Ticket('Superman', 'Morning', 'Child', 'New')
      expect(testTicket.ageDiscount()).to.equal(-2);
    });
+   it("adds the timeDiscount method to all tickets", function() {
+     var testTicket = new Ticket('Superman', 'Morning', 'Adult', 'New')
+     expect(testTicket.timeDiscount()).to.equal(-1);
+   });
 
   //  it("adds the getPrice method to all tickets", function() {
   //    var testTicket = new Ticket('Superman', 'Morning', 'Adult', 'New');
