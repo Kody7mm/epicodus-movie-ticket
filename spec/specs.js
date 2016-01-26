@@ -19,9 +19,8 @@
      var testTicket = new Ticket('Superman', 'Morning', 'Adult', 'Old')
      expect(testTicket.statusDiscount()).to.equal(-3);
    });
-
-  //  it("adds the getPrice method to all tickets", function() {
-  //    var testTicket = new Ticket('Superman', 'Morning', 'Adult', 'New');
-  //    expect(testTicket.getPrice()).to.equal(12);
-  //  });
+   it("adds the getPrice method to all tickets", function() {
+     var testTicket = new Ticket('Superman', 'Morning', 'Adult', 'New');
+     expect(testTicket.getPrice()).to.equal(9);
+   });
  });
