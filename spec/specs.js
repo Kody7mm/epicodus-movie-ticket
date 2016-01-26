@@ -7,3 +7,12 @@
      expect(newTicket.price).to.equal();
    });
  });
+
+ describe('Movie', function() {
+   it("create a movie with the following properties", function() {
+     var newMovie = new Movie('Superman', 'R', 'New');
+     expect(newMovie.title).to.equal('Superman');
+     expect(newMovie.rating).to.equal('R');
+     expect(newMovie.status).to.equal('New');
+   });
+ });
